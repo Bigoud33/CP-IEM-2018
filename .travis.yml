@@ -14,4 +14,4 @@ android:
     - chmod +x gradlew
 
   script:
-      - ./gradlew clean build
+    - ./gradlew clean build
