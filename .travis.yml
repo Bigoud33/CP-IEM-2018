@@ -14,5 +14,5 @@ android:
     - android-28
     
   script:
-    - chmod +x gradlew
+    - chmod +x ./gradlew build connectedCheck
     - ./gradlew clean build
