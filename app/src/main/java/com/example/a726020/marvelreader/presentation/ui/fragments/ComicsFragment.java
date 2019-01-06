@@ -32,7 +32,7 @@ public class ComicsFragment extends BaseFragment implements ComicsView {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView =  inflater.inflate(R.layout.comics_fragment, container, false);
-        presenter = new ComicsFragmentPresenter(JsonParser.getInstance(getContext()));
+        presenter = new ComicsFragmentPresenter(JsonParser.getInstance(getContext().getResources()));
 
         rvComicsList = rootView.findViewById(R.id.rvComicsList);
         progressBar = rootView.findViewById(R.id.progressBar);
@@ -43,7 +43,7 @@ public class ComicsFragment extends BaseFragment implements ComicsView {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        presenter = new ComicsFragmentPresenter(JsonParser.getInstance(getContext()));
+        presenter = new ComicsFragmentPresenter(JsonParser.getInstance(getContext().getResources()));
         presenter.attach(this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
         rvComicsList.setLayoutManager(layoutManager);

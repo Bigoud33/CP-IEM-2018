@@ -15,14 +15,14 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
-
+import android.content.res.Resources;
 public class JsonParser implements JsonParserInterface {
 
-    Context context;
+    Resources resources;
     private final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-    private JsonParser(Context context) {
-        this.context = context;
+    private JsonParser(Resources resources) {
+        this.resources = resources;
     }
 
     private JsonParser()
@@ -31,9 +31,9 @@ public class JsonParser implements JsonParserInterface {
     private static JsonParser INSTANCE = null;
 
 
-    public static JsonParser getInstance(Context context) {
+    public static JsonParser getInstance(Resources resources) {
         if (INSTANCE == null)
-        {   INSTANCE = new JsonParser(context);
+        {   INSTANCE = new JsonParser(resources);
         }
         return INSTANCE;
     }
@@ -42,7 +42,7 @@ public class JsonParser implements JsonParserInterface {
         String json = null;
         try {
             //here to change json to parse
-            InputStream is = context.getResources().openRawResource(R.raw.sample_ok);
+            InputStream is = resources.openRawResource(R.raw.sample_ok);
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
