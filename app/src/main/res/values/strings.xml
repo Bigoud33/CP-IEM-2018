@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MarvelReader</string>
+    <string name="comicsTitle">Titre :</string>
+    <string name="Date">Date</string>
+    <string name="PageCount">Nb page :</string>
+    <string name="Description">Synopsis</string>
+    <string name="Informations">Informations</string>
+    <string name="PublicationDate">Date de publication :</string>
+    <string name="Credits">Crédits</string>
+    <string name="Price">Price</string>
+    <string name="DiamondCode">DiamondCode</string>
+    <string name="Creator">Creator</string>
 </resources>
