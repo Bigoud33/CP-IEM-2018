@@ -8,7 +8,7 @@ public abstract class BasePresenter<V extends BaseView> {
         return (V)unsafeView;
     }
 
-    void attach(BaseView v) {
+    public void attach(BaseView v) {
         this.unsafeView = v;
     }
 
